@@ -87,7 +87,7 @@ class RCONMessageError(RCONError):
 class RCONMessage(object):
     """Represents a RCON request or response."""
 
-    ENCODING = "ascii"
+    ENCODING = "utf-8"
 
     class Type(enum.IntEnum):
         """Message types corresponding to ``SERVERDATA_`` constants."""
