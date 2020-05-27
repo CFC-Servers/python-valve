@@ -480,6 +480,7 @@ class RCON(object):
         log.debug("Connecting to %s", self._address)
         self._socket = socket.socket(
             socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
+        self._socket.settimeout(self._timeout)
         self._socket.connect(self._address)
 
     @_ensure('connected')
